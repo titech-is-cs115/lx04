@@ -10,7 +10,7 @@ package puzzle
  **/
 object Solution2 extends Solution {
 
-  def name = "Solution 2"
+  val name = "Solution 2"
 
   def genCheck(): List[List[Int]] = {
     val range = List.range(0, 9)

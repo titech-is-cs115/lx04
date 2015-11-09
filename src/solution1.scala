@@ -5,7 +5,7 @@ package puzzle
 
 object Solution1 extends Solution {
 
-  def name = "Solution 1"
+  val name = "Solution 1"
 
   /**
    * 数列(nums)中に出現するnの個数を勘定する．
@@ -48,7 +48,7 @@ object Solution1 extends Solution {
    * (x1, x2, x3, x4): x1, x2, x3, x4 in [0, 9] を生成するために，[0, 10^4-1]
    * の範囲の非負整数の十進表記の下4桁をそれぞれx1, x2, x3, x4としている．
    **/
-  def N = 10 * 10 * 10 * 10
+  val N = 10 * 10 * 10 * 10
   def genCheck(i: Int, answers: List[List[Int]]): List[List[Int]] = {
     if (i >= N) answers
     else {

@@ -4,6 +4,6 @@
 package puzzle
 
 trait Solution {
-  def name: String
+  val name: String
   def solve(): List[List[Int]]
 }
