@@ -27,4 +27,4 @@ scalaSource in Compile := baseDirectory.value / "src"
 
 // コンパイル結果を非標準の場所に設定
 
-target := Path.userHome / "tmp" / "cs1f" / "lx04"
+target := Path.userHome / "tmp" / "cs1f" / "lx05"
