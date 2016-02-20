@@ -22,3 +22,6 @@ tags
 .CFUserTextEncoding
 .localized
 Icon
+
+# intelliJ specific
+.idea
