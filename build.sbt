@@ -10,10 +10,13 @@ scalacOptions ++=        // scalac に与えるオプション
   Seq("-optimize",
     "-feature",
     "-unchecked",
-    "-deprecation")
+    "-deprecation",
+    "-Xlint")
 
 javaOptions in run ++=   // 仮想機械に与えるオプション
-  Seq( "-Xmx2G", "-verbose:gc")                          
+  Seq( "-Xmx2G", "-verbose:gc")
+
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.5" % "test"
 
 // sbt の挙動の設定
 
@@ -24,6 +27,8 @@ connectInput := true
 // ソースコードの在処を非標準の場所に設定
 
 scalaSource in Compile := baseDirectory.value / "src"
+
+scalaSource in Test := baseDirectory.value / "test"
 
 // コンパイル結果を非標準の場所に設定
 
