@@ -9,13 +9,13 @@ object Solution1 extends Solution {
 
   /**
    * 数列(nums)中に出現するnの個数を勘定する．
-   * c(2)(List(1, 2, 3, 2, 1, 4)) => 2
-   * c(3)(List(1, 2, 3, 2, 1, 4)) => 1
-   * c(0)(List(1, 2, 3, 2, 1, 4)) => 0
+   * countN(2)(List(1, 2, 3, 2, 1, 4)) => 2
+   * countN(3)(List(1, 2, 3, 2, 1, 4)) => 1
+   * countN(0)(List(1, 2, 3, 2, 1, 4)) => 0
    *
    * lx03.Puzzleでは再帰的関数を用意した．ここではList.foldLeftを用いている．
    **/
-  def c(n: Int)(nums: List[Int]): Int = {
+  def countN(n: Int)(nums: List[Int]): Int = {
     nums.foldLeft (0) ((s, x) => s + (if (x == n) 1 else 0))
   }
 
@@ -24,7 +24,7 @@ object Solution1 extends Solution {
    * counts(List(1, 2, 3, 2, 1, 4)) => List(2, 2, 1, 1)
    **/
   def counts(nums: List[Int]): List[Int] = {
-    val (c1, c2, c3) = (c(1)(nums), c(2)(nums), c(3)(nums))
+    val (c1, c2, c3) = (countN(1)(nums), countN(2)(nums), countN(3)(nums))
     val c_ = nums.length - (c1 + c2 + c3)
     List(c1, c2, c3, c_)
   }
